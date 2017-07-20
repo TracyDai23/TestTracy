@@ -27,3 +27,16 @@ print (a)
 # The test example 1116 only has GarageType but no other information. We'll 
 # assume it does not have a garage.
 test_df.loc[1116, "GarageType"] = np.nan
+
+# Used to convert categorical features into ordinal numbers.
+# (There's probably an easier way to do this, but it works.)
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+
+def factorize(df, factor_df, column, fill_na=None):
+    factor_df[column] = df[column]
+    if fill_na is not None:
+        factor_df[column].fillna(fill_na, inplace=True)
+    le.fit(factor_df[column].unique())
+    factor_df[column] = le.transform(factor_df[column])
+    return factor_df
