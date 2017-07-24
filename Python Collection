@@ -40,3 +40,26 @@ def factorize(df, factor_df, column, fill_na=None):
     le.fit(factor_df[column].unique())
     factor_df[column] = le.transform(factor_df[column])
     return factor_df
+
+# 定义若干个对数据进行清理的函数，这些函数主要作用在pandas的DataFrame数据类型上
+# 查看数据集属性值得确实情况
+def show_missing(houseprice): #houseprice should be a DataFrame structure parameter
+    missing = houseprice.columns[houseprice.isnull().any()].tolist()
+    return missing
+
+# 查看 categorical 特征的值情况, category distribution
+def cat_exploration(houseprice, column):
+    print (houseprice[column].value_counts())
+    
+# 对数据集中某一列的缺失值进行tidia
+def cat_imputation(houseprice, column, value):
+    houseprice.loc[houseprice[column].isnull,column] =value
+
+
+
+#Check correlation between two parameter: test_data['LotFrontage'] vs. test_data['LotArea']
+print(test_data['LotFrontage'].corr(test_data['LotArea'])) 
+
+#SQL- Where Clause
+#Following statement print full test_data when MSZoning column is null.
+print(test_data[test_data['MSZoning'].isnull()==True])
