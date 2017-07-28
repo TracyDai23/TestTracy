@@ -63,3 +63,24 @@ print(test_data['LotFrontage'].corr(test_data['LotArea']))
 #SQL- Where Clause
 #Following statement print full test_data when MSZoning column is null.
 print(test_data[test_data['MSZoning'].isnull()==True])
+#Following statemnet equals to:
+# "Select basement_cols defined columns 
+#  from train_data where train_data.BsmtQual is null"
+print(train_data[basement_cols][train_data['BsmtQual'].isnull()==True])
+
+
+#pd.crosstab: is to pivot table and count occurancies
+print(pd.crosstab(test_data.BsmtCond,test_data.BsmtQual))
+
+
+## In this "For in " statement, test_data.columns is a list of all column names from test_data set.
+for col in test_data.columns:
+    t1 = test_data[col].dtype
+    t2 = train_data[col].dtype
+    if t1!=t2:
+        print(col,t1,t2)
+        
+ #SQL - Merge, Join and Concate 
+https://pandas.pydata.org/pandas-docs/stable/merging.html
+
+
