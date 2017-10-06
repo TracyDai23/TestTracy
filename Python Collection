@@ -84,3 +84,5 @@ for col in test_data.columns:
 https://pandas.pydata.org/pandas-docs/stable/merging.html
 
 
+#Change column name in DataFrame:
+df_test=df_test.rename(index = str, columns= {"NoteUser0":"NoteUser"})
