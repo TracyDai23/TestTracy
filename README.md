@@ -1,6 +1,9 @@
-# TestTracy
-This is a Hello World Test Repository
-这只是一个测试啦，看看github怎么存储和处理文件。 
+# Contents and Quick Notes
+
+(Big) Data Engineering:
+"Typical data modeling techniques — like the star schema — which defined our approach to data modeling for the analytics workloads typically associated with data warehouses, are less relevant than they once were.
+--The Rise of Data Engineering"
+https://medium.freecodecamp.org/the-rise-of-the-data-engineer-91be18f1e603
 
 Python Learning Resource:
 1. Import Python data into SQL:
