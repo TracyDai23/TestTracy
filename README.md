@@ -11,3 +11,5 @@ Python Learning Resource:
   1)https://stackoverflow.com/questions/29287946/programmingerror-the-sql-contains-1-parameter-markers-but-2-parameters-were
   2)https://stackoverflow.com/questions/30984968/pyodbc-sql-server-typeerror-not-all-arguments-converted-during-string-formatt
 
+#Python Time Series Resource: 
+https://jakevdp.github.io/PythonDataScienceHandbook/03.11-working-with-time-series.html
