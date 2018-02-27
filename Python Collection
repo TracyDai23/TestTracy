@@ -68,6 +68,10 @@ print(test_data[test_data['MSZoning'].isnull()==True])
 #  from train_data where train_data.BsmtQual is null"
 print(train_data[basement_cols][train_data['BsmtQual'].isnull()==True])
 
+#Replace a value with Where Clause
+#Update RPC column
+new_calllog.loc[new_calllog['agent_system_term_code'].isin(['PP','PTP']),['rpc']]='Yes'
+loc[<condition>, <update colume name>] = <update value>
 
 #pd.crosstab: is to pivot table and count occurancies
 print(pd.crosstab(test_data.BsmtCond,test_data.BsmtQual))
