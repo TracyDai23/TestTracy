@@ -96,3 +96,6 @@ df_test=df_test.rename(index = str, columns= {"NoteUser0":"NoteUser"})
 ch['IfAvgHigher']='Unknown'
 ch.loc[ch['AvgCharge'] >= ch['MonthlyCharges'], 'IfAvgHigher'] = 'Yes'
 ch.loc[ch['AvgCharge'] < ch['MonthlyCharges'], 'IfAvgHigher'] = 'No'
+
+#Check if dataframe column contains certain value:
+df[df['A'].str.contains("hello")]
