@@ -13,3 +13,30 @@ Python Learning Resource:
 
 #Python Time Series Resource: 
 https://jakevdp.github.io/PythonDataScienceHandbook/03.11-working-with-time-series.html
+
+API Parameters: 
+headers = {"Content-type": "application/x-www-form-urlencoded",  
+        "Accept": "application/json","Content-type":"application/xml; charset=utf=8"}  
+conn = httplib.HTTPConnection("www.xxx.com")  
+conn.request("GET","/get?id=1","",headers)  
+response = conn.getresponse()  
+print "Return code:", response.status, " reason:", response.reason  
+print response.status  
+if response.status == 200:  
+    usersdata = response.read()  
+    user = json.loads(usersdata)  
+    print user[0]  
+else:  
+    print "Error sending message,check your account" 
+
+#Deal with Json Data: 
+import json  
+json_class = json.JSONDecoder()  
+a = json_class.raw_decode(jstr)  
+print a  
+ 
+b = json_class.decode(jstr)  
+print b  
+  
+c = json.loads(jstr)  
+print c  
