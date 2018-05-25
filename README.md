@@ -40,3 +40,28 @@ print b
   
 c = json.loads(jstr)  
 print c  
+
+
+Create executable GUI app by Python: 
+
+First you will need some GUI library with Python bindings and then (if you want) some program that will convert your python scripts into standalone executables.
+
+Cross-platform GUI libraries with Python bindings (Windows, Linux, Mac)
+
+Of course, there are many, but the most popular that I've seen in wild are:
+
+Tkinter - based on Tk GUI toolkit (de-facto standard GUI library for python, free for commercial projects)
+WxPython - based on WxWidgets (very popular, free for commercial projects)
+PyQt - based on Qt (also very popular and more stable than WxWidgets but costly license for commercial projects)
+Complete list is at http://wiki.python.org/moin/GuiProgramming
+
+Single executable (Windows)
+
+py2exe - Probably the most popular out there (PyInstaller is also gaining in popularity)
+Single executable (Linux)
+
+Freeze - works the same way like py2exe but targets Linux platform
+Single executable (Mac)
+
+py2app - again, works like py2exe but targets Mac OS
+*source: https://stackoverflow.com/questions/2933/how-can-i-create-a-directly-executable-cross-platform-gui-app-using-python
