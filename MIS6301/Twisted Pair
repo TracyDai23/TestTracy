@@ -1,0 +1,11 @@
+Twisted Pair
+Twisted pair cabling uses two signal lines and twisted into one to help minimize electromagnetic radiation. Noises are generated in signal lines by magnetic fields from the environment. 
+When cables are placed straight, all noise current is following in the same direction. 
+After invented by Alexander Graham Bell in 1881, when two cables are twisted, in some parts of the signal lines the direction of the noise current is the opposite from the current in other parts of the cable. 
+Twisted pair cable can also reduce external electromagnetic interference.  
+
+
+Twisted pair cabling also used for Ethernet cables. In 1984, StarLAN showed the potential of simple unshielded twisted pair. It allows speeds of 10100Mbit/s and up to 10 Gbit/s.(IEEE 802.3.1.2.3)
+
+Reference: 
+IEEE 802.3 1.2.3 Physical Layer and media notation
